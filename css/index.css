@@ -26,3 +26,56 @@
 .explore-btn{
     margin-top: 20px;
 }
+#products {
+	padding-top: 60px;
+}
+
+#products-spinner {
+	margin: 50px auto;
+}
+
+.card.product {
+	margin: 10px 0;
+}
+
+.card.product .card-img-top {
+	height: 200px;
+}
+
+.card.product .btn-outer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+
+.card.product .btn-outer .buy-btn {
+	flex: 1;
+	margin: 0 0 0 5px;
+}
+
+.card.product .btn-outer .add-to-cart-btn{
+	flex: 1;
+}
+
+.card.product .product-header {
+	display: flex;
+	justify-content: space-between;
+	height: 39px;
+}
+
+.fa-star.checked {
+  color: orange;
+}
+
+.card-title.product-price {
+	color: green;
+	margin-left: 4px;
+}
+
+.card-text {
+	height: 72px;
+}
+
+.rating-count {
+	margin-left: 5px;
+}
