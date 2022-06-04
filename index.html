@@ -11,9 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <script src="https://lottiefiles.com/45650-shopping-cart"></script>
+     <script src="https://kit.fontawesome.com/430f64643a.js" crossorigin="anonymous"></script>
+     <script src="https://lottiefiles.com/45650-shopping-cart"></script>
     <title>Vish shoping site.</title>
     <link rel="stylesheet" href="css/index.css">
+
 </head>
 
 <body onload="fetchProducts()">
@@ -38,7 +40,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact us</a>
                     </li>
-                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Cart
+                            &nbsp;
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            <span class="badge badge-pill badge-light  text-dark" id="cart-items-length">0</span>
+                        </a>
+                    </li>
                     
                 </ul>
                 <ul class="navbar-nav">
@@ -64,7 +73,7 @@
         <div class="imagediv">
             <img src="images/shopping3.gif" alt="" >
         </div>
-        <a class="btn explore-btn btn-lg" href="#" role="button">Explore</a>
+        <a class="btn explore-btn btn-lg" href="products" role="button">Explore</a>
     </div>
     
     <div class="container">

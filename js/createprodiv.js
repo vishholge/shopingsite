@@ -29,7 +29,7 @@ const createProductDiv = (product) => {
 	const addToCartButton = document.createElement('a')
 	const buyButton = document.createElement('a')
 
-	colDiv.classList = 'col-md-3'
+	colDiv.classList = 'col-lg-3 col-md-4 col-sm-6 '
 	productDiv.classList = 'card product'
 	productImg.classList = 'card-img-top'
 	productBody.classList = 'card-body'
@@ -66,9 +66,7 @@ const createProductDiv = (product) => {
 	productHeader.appendChild(productTitle)
 	productHeader.appendChild(productPrice)
 	productBody.appendChild(productDescription)
-	productBody.appendChild(cardButtonOuter)
-	cardButtonOuter.appendChild(addToCartButton)
-	cardButtonOuter.appendChild(buyButton)
+	
 
 	const ratingStars = Math.ceil(product.rating.rate)
 	ratingStars >= 1 && productBody.appendChild(ratingStar1)
@@ -77,6 +75,9 @@ const createProductDiv = (product) => {
 	ratingStars >= 4 && productBody.appendChild(ratingStar4)
 	ratingStars >= 5 && productBody.appendChild(ratingStar5)
 	productBody.appendChild(ratingCount)
+	productBody.appendChild(cardButtonOuter)
+	cardButtonOuter.appendChild(addToCartButton)
+	cardButtonOuter.appendChild(buyButton)
 
 	productsParentDiv.appendChild(colDiv)
 

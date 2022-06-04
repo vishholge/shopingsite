@@ -2,6 +2,9 @@
     background-color: #faf7ce !important;
     color: black;
 }
+.body{
+	background-color: #f77ea4;
+}
 .jumbotron{
     background-color: #faf7ce;
     
@@ -24,7 +27,7 @@
     height: 50vh;
 }
 .explore-btn{
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 #products {
 	padding-top: 60px;
