@@ -1,6 +1,28 @@
 .navbar{
-    background-color: #f48c94;
+    background-color: #faf7ce !important;
+    color: black;
 }
 .jumbotron{
-    background-color:#f48c94;
+    background-color: #faf7ce;
+    
+}
+.jumbotron{
+    text-align: center;
+}
+.btn{
+    background: #94445c;
+    border: none;
+    color: white;
+}
+.container{
+    background-color: #f77ea4;
+}
+.imagediv img{
+    
+    
+    width: 50vh;
+    height: 50vh;
+}
+.explore-btn{
+    margin-top: 20px;
 }
