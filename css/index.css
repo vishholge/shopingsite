@@ -16,6 +16,7 @@
     background: #94445c;
     border: none;
     color: white;
+	cursor: pointer;
 }
 .container{
     background-color: #f77ea4;
@@ -81,4 +82,12 @@
 
 .rating-count {
 	margin-left: 5px;
+}
+.sign-up-container{
+    background-color: #f77ea4;
+    border: 2px solid black;
+    padding: 20px;
+    margin-top: 5rem;
+    
+   
 }
