@@ -1,14 +1,16 @@
-let signUpForm = document.getElementById("exampleModal");
+let signUpForm = document.getElementById("signupForm");
+    
+const hey = () => {
+    console.log("heelo world");
+}
+function isValidate(){
     let firstName = signUpForm.getElementById("firstname").value;
     let lastName = signUpForm.getElementById("lastname").value;
     let email = signUpForm.getElementById("email").value;
     let phone = signUpForm.getElementById("phoneno").value;
-    let signUpPass = dsignUpForm.getElementById("sign-up-password").value;
+    let signUpPass = signUpForm.getElementById("sign-up-password").value;
     let confirmaPass = signUpForm.getElementById("confirm-password").value;
     let invalidCheck = signUpForm.getElementById("invalidCheck").checked;
-
-
-function isValidate(){
     
     const arr = [false,false,false,false,false,false];
 

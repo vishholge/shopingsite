@@ -3,9 +3,9 @@ const DB_USERS = [];
 
 let signUpNav = document.getElementById("sign-up-nav");
 let loginNav = document.getElementById("login-nav");
-let signUpForm = document.getElementById("exampleModal");
+// let signUpForm = document.getElementById("exampleModal");
 const signUp = () => {
-      
+      console.log("helllo worlld");
       let isvalid = isValidate();
       if(isvalid === false ){
         return;
