@@ -57,7 +57,7 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link " id="sign-up-nav" data-bs-toggle="modal" data-bs-target="#exampleModal">signup</a>
+            <a class="nav-link " id="sign-up-nav" data-bs-toggle="modal" data-bs-target="#signUpModal">signup</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " id="login-nav" aria-current="page">login</a>
@@ -104,7 +104,7 @@
 
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="container sign-up-container " id="sign-up-page">
@@ -115,7 +115,7 @@
           <form class="row g-3 needs-validation" novalidate id="signupForm">
             <div class="col-md-6">
               <label for="firstname" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstname" placeholder="john" required>
+              <input type="text" class="form-control" id="firstname" placeholder="john" required onkeyup="isValidFirstName()">
               <div class="valid-feedback" id="firstNameValid">
                 Looks good!
               </div>
@@ -125,7 +125,7 @@
             </div>
             <div class="col-md-6">
               <label for="lastname" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastname" placeholder="snow" required>
+              <input type="text" class="form-control" id="lastname" placeholder="snow" required onkeyup="isValidLastName()">
               <div class="valid-feedback" id="lastNameValid">
                 Looks good!
               </div>
@@ -138,7 +138,7 @@
               <div class="input-group has-validation">
                 <span class="input-group-text" id="inputGroupPrepend">@</span>
                 <input type="email" class="form-control" id="email" aria-describedby="inputGroupPrepend" required
-                  placeholder="abc@gmail.com">
+                  placeholder="abc@gmail.com" onkeyup="isValidMail()">
                 <div class="valid-feedback" id="emailValid">
                   Looks good!
                 </div>
@@ -149,7 +149,7 @@
             </div>
             <div class="col-md-12">
               <label for="phoneno" class="form-label"><i class="fa-solid fa-phone"></i> Phone</label>
-              <input type="number" class="form-control" id="phoneno" required>
+              <input type="number" class="form-control" id="phoneno" required onkeyup="isValidPhone()">
               <div class="valid-feedback" id="phoneValid">
                 Looks good!
               </div>
@@ -160,7 +160,7 @@
 
             <div class="col-md-6">
               <label for="validationCustom05" class="form-label"><i class="fa-solid fa-key"></i> Password</label>
-              <input type="password" class="form-control" id="sign-up-password" required placeholder="Password">
+              <input type="password" class="form-control" id="sign-up-password" required placeholder="Password" >
 
               <div class="invalid-feedback" id="signup-pass-invalid">
                 Please provide a valid password.
@@ -173,8 +173,12 @@
                 Password</label>
               <input type="password" class="form-control" id="confirm-password" required placeholder="Confirm password"
                 onkeyup="confirmPass()">
-              <span id="confirm-pass"
-                style="width: 15px; height: 15px; background-color:green; border-radius: 50%;"></span>
+                <div class="valid-feedback" id="match-pass">
+                  password Match!!
+                </div>
+                <div class="invalid-feedback" id="doesnt-match-pass">
+                   password does not match.
+                </div>
 
             </div>
             <div class="col-12">
@@ -189,7 +193,7 @@
               </div>
             </div>
             <div class="col-12">
-              <button class="btn btn-dark" onclick="hey()" type="submit" >Sign-Up</button>
+              <button class="btn btn-dark" type="button" onclick="signUp()"  >Sign-Up</button>
             </div>
           </form>
 
@@ -202,6 +206,7 @@
   <script src="js/addtocart.js"></script>
   <script src="js/misc.js"></script>
   <script src="js/signup.js"></script>
+  <script src="js/validate.js"></script>
 
 </body>
 

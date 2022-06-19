@@ -3,22 +3,27 @@ const DB_USERS = [];
 
 let signUpNav = document.getElementById("sign-up-nav");
 let loginNav = document.getElementById("login-nav");
-// let signUpForm = document.getElementById("exampleModal");
+
+
+
+
 const signUp = () => {
-      console.log("helllo worlld");
+    let notificationAlert = document.getElementById('notification-alert')
+	let notificationText = document.getElementById('notification-text')
+    let signupForm = document.getElementById("signupForm");
       let isvalid = isValidate();
       if(isvalid === false ){
         return;
       }
-      let firstName = signUpForm.getElementById("firstname");
-      let email = signUpForm.getElementById("email");
-      let password = signUpForm.getElementById("sign-up-password");
+      let firstName = document.getElementById("firstname").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("sign-up-password").value;
       
       let newUser = { firstName,email,password};
       
       DB_USERS.push(newUser);
 
-      reset()
+    //   reset()
 		$('#signUpModal').modal('hide')
 
         notificationAlert.classList = 'alert alert-success alert-dismissible fade show'
@@ -40,5 +45,6 @@ const signUp = () => {
 		loginNav.innerHTML = previousLoginNavInnerContent
 	})
     console.log(newUser);
+    console.log(DB_USERS);
 
 }
