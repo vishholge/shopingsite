@@ -44,8 +44,8 @@ const createProductDiv = (product) => {
 	ratingStar5.classList = 'fa fa-star checked'
 	ratingCount.classList = 'rating-count'
 	cardButtonOuter.classList = 'btn-outer'
-	addToCartButton.classList = 'btn btn-primary add-to-cart-btn'
-	buyButton.classList = 'btn btn-primary buy-btn'
+	addToCartButton.classList = 'btn  add-to-cart-btn'
+	buyButton.classList = 'btn  buy-btn'
 
 	colDiv.id = `product-${product.id}`
 
@@ -83,6 +83,7 @@ const createProductDiv = (product) => {
 
 	addToCartButton.addEventListener('click', function () {
 		addToCart(product.id);
-		this.innerHTML = '<i class="fa fa-check-circle" aria-hidden="true"></i>'
+		this.innerHTML = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+		this.classList.add('disabled');
 	})
 }
