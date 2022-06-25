@@ -94,3 +94,9 @@
 #notification-alert{
 	display: none;
 }
+#loginValid{
+	display: none;
+}
+#loginInvalid{
+	display: none;
+}

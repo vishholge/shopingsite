@@ -48,3 +48,4 @@ const signUp = () => {
     console.log(DB_USERS);
 
 }
+console.log(DB_USERS);

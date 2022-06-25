@@ -60,7 +60,7 @@
             <a class="nav-link " id="sign-up-nav" data-bs-toggle="modal" data-bs-target="#signUpModal">signup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " id="login-nav" aria-current="page">login</a>
+            <a class="nav-link " id="login-nav" data-bs-toggle="modal" data-bs-target="#loginModal">login</a>
           </li>
         </ul>
 
@@ -103,7 +103,7 @@
   <!-- Button trigger modal -->
 
 
-  <!-- Modal -->
+  <!-- Sign up Modal Modal -->
   <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -115,7 +115,8 @@
           <form class="row g-3 needs-validation" novalidate id="signupForm">
             <div class="col-md-6">
               <label for="firstname" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstname" placeholder="john" required onkeyup="isValidFirstName()">
+              <input type="text" class="form-control" id="firstname" placeholder="john" required
+                onkeyup="isValidFirstName()">
               <div class="valid-feedback" id="firstNameValid">
                 Looks good!
               </div>
@@ -125,7 +126,8 @@
             </div>
             <div class="col-md-6">
               <label for="lastname" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastname" placeholder="snow" required onkeyup="isValidLastName()">
+              <input type="text" class="form-control" id="lastname" placeholder="snow" required
+                onkeyup="isValidLastName()">
               <div class="valid-feedback" id="lastNameValid">
                 Looks good!
               </div>
@@ -160,7 +162,8 @@
 
             <div class="col-md-6">
               <label for="validationCustom05" class="form-label"><i class="fa-solid fa-key"></i> Password</label>
-              <input type="password" class="form-control" id="sign-up-password" required placeholder="Password" onkeyup="isValidPass()">
+              <input type="password" class="form-control" id="sign-up-password" required placeholder="Password"
+                onkeyup="isValidPass()">
 
               <div class="invalid-feedback" id="signup-pass-invalid">
                 Please provide a valid password.
@@ -173,12 +176,12 @@
                 Password</label>
               <input type="password" class="form-control" id="confirm-password" required placeholder="Confirm password"
                 onkeyup="confirmPass()">
-                <div class="valid-feedback" id="match-pass">
-                  password Match!!
-                </div>
-                <div class="invalid-feedback" id="doesnt-match-pass">
-                   password does not match.
-                </div>
+              <div class="valid-feedback" id="match-pass">
+                password Match!!
+              </div>
+              <div class="invalid-feedback" id="doesnt-match-pass">
+                password does not match.
+              </div>
 
             </div>
             <div class="col-12">
@@ -193,10 +196,60 @@
               </div>
             </div>
             <div class="col-12">
-              <button class="btn btn-dark" type="button" onclick="signUp()"  >Sign-Up</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button class="btn btn-dark" type="button" onclick="signUp()">Sign-Up</button>
             </div>
           </form>
 
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- login modall        -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="container log-in-container" id="log-in-page">
+          <div class="heading">
+            <h2>log-in</h2>
+            <p>please long-in using Email.</p>
+          </div>
+          <form class="row g-3 needs-validation" novalidate>
+
+            <div class="col-md-12">
+              <label for="validationCustomUsername" class="form-label"> <i class="fa-solid fa-envelope"></i>
+                Email</label>
+              <div class="input-group has-validation">
+
+                <input type="email" class="form-control" id="log-in-id" aria-describedby="inputGroupPrepend" required
+                  placeholder="xyz@gmail.com">
+                <div class="invalid-feedback" id="invalid-mail">
+                  Please enter a mail.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom03" class="form-label"> <i class="fa-solid fa-lock"></i> Password</label>
+              <input type="password" class="form-control" id="log-in-password" required placeholder="Password">
+              <div class="invalid-feedback" id="invalid-pass">
+                Please enter password
+              </div>
+            </div>
+            <div id="loginValid">
+              login Access granted!!.
+            </div>
+            <div id="loginInvalid">
+              Incorrect password or id login acces Denied!
+
+            </div>
+
+
+
+            <div class="col-12">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button class="btn btn-dark" type="button" onclick="logIn()">log-in</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -207,6 +260,7 @@
   <script src="js/misc.js"></script>
   <script src="js/signup.js"></script>
   <script src="js/validate.js"></script>
+  <script src="js/login.js"></script>
 
 </body>
 
