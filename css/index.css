@@ -121,3 +121,12 @@
 #heading{
 	font-family: 'Anton', sans-serif;
 }
+footer{
+	background-color: #faf7ce;
+}
+.navbar{
+	position: sticky;
+	top: 0px;
+	z-index: 3;
+
+}
