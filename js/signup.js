@@ -44,8 +44,7 @@ const signUp = () => {
 		signUpNav.innerHTML = previousSignUpNavInnerContent
 		loginNav.innerHTML = previousLoginNavInnerContent
 	})
-    console.log(newUser);
-    console.log(DB_USERS);
+    
 
 }
-console.log(DB_USERS);
+
